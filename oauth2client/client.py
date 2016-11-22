@@ -474,8 +474,11 @@ class OAuth2Credentials(Credentials):
                             because some providers (e.g. wordpress.com) include
                             extra fields that clients may want.
             scopes: list, authorized scopes for these credentials.
-          token_info_uri: string, the URI for the token info endpoint. Defaults
-                          to None; scopes can not be refreshed if this is None.
+            token_info_uri: string, the URI for the token info endpoint.
+                            Defaults to None; scopes can not be refreshed if
+                            this is None.
+            id_token_jwt: string, the encoded and signed identity JWT. The
+                          decoded version of this is stored in id_token.
 
         Notes:
             store: callable, A callable that when passed a Credential
